@@ -45,13 +45,7 @@ DB_PORT=5432 - порт для подключения к БД
     >>> ContentType.objects.all().delete()
     >>> quit()
     python manage.py loaddata dump.json
-  
-### Заполните базу данных из csv файлов: ###
-    python3 manage.py populate_db
-  
-### Запустите проект: ###
-    python3 manage.py runserver
-  
+
 ## Алгоритм регистрации пользователей ##
   
 1. Пользователь отправляет POST-запрос на добавление нового пользователя с параметрами `email` и `username` на эндпоинт `/api/v1/auth/signup/`.  

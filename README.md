@@ -8,47 +8,43 @@
 
   
  ## Шаблон наполнения `.env` файла:
-`DB_ENGINE=django.db.backends.postgresql` - указываем, что работаем с postgresql
-`DB_NAME=postgres` - имя базы данных
-`POSTGRES_USER=you_login` - логин для подключения к базе данных
-`POSTGRES_PASSWORD=you_password` - пароль для подключения к БД (установите свой)
-`DB_HOST=db` - название сервиса (контейнера)
-`DB_PORT=5432` - порт для подключения к БД
+DB_ENGINE=django.db.backends.postgresql - указываем, что работаем с postgresql
+DB_NAME=postgres - имя базы данных
+POSTGRES_USER=you_login - логин для подключения к базе данных
+POSTGRES_PASSWORD=you_password - пароль для подключения к БД (установите свой)
+DB_HOST=db - название сервиса (контейнера)
+DB_PORT=5432 - порт для подключения к БД
  
 ## Установка: ##
 
 ### Клонируйте репозиторий: ###
 
-    `git clone hgit@github.com:KitKat-ru/infra_sp2.git`
+    git clone hgit@github.com:KitKat-ru/infra_sp2.git
 
 ### Перейдите в репозиторий к директории с файлом docker-compose.yaml с помощью командной строки: ###
 
-    `cd infra_sp2/infra/`
+    cd infra_sp2/infra/
   
 ### Установите [Docker и Docker-compose](https://docs.docker.com/engine/install/ubuntu/). Запустите сборку образов: ###
 
-    `sudo docker-compose up`
+    sudo docker-compose up
 
 ### или
 
-    `sudo docker-compose up -d --build`
+    sudo docker-compose up -d --build
   
 ### После развертывания проекта создайте миграции и заполнените базу данных: ###
     
-    `sudo docker-compose exec web python manage.py migrate`
-
-### Войдите в контейнер web:
-
-    
+    sudo docker-compose exec web python manage.py migrate
 
 ### Перейдите в директорию с файлом `manage.py`и выполните следующий код:
 
-    `python3 manage.py shell`
-    `# выполнить в открывшемся терминале:`
-    `>>> from django.contrib.contenttypes.models import ContentType`
-    `>>> ContentType.objects.all().delete()`
-    `>>> quit()`
-    `python manage.py loaddata dump.json`
+    python3 manage.py shell
+    # выполнить в открывшемся терминале:
+    >>> from django.contrib.contenttypes.models import ContentType
+    >>> ContentType.objects.all().delete()
+    >>> quit()
+    python manage.py loaddata dump.json
   
 ### Заполните базу данных из csv файлов: ###
     python3 manage.py populate_db

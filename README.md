@@ -22,7 +22,7 @@ DB_PORT=5432 - порт для подключения к БД
     git clone hgit@github.com:KitKat-ru/infra_sp2.git
 
 
-### Пример файла `.env`: ###
+### Пример файла `.env`. Должен находится в папке `./infra_sp2/infra/`: ###
 
     SECRET_KEY=... (ключ к Джанго проекту)
     DB_ENGINE=django.db.backends.postgresql (указываем, что работаем с postgresql)

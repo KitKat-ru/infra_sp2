@@ -21,6 +21,17 @@ DB_PORT=5432 - порт для подключения к БД
 
     git clone hgit@github.com:KitKat-ru/infra_sp2.git
 
+
+### Пример файла `.env`: ###
+
+    SECRET_KEY=... (ключ к Джанго проекту)
+    DB_ENGINE=django.db.backends.postgresql (указываем, что работаем с postgresql)
+    DB_NAME=postgres (имя базы данных)
+    POSTGRES_USER=... (логин для подключения к базе данных)
+    POSTGRES_PASSWORD=... (пароль для подключения к БД (установите свой)
+    DB_HOST=db (название сервиса (контейнера)
+    DB_PORT=5432 (порт для подключения к БД)
+
 ### Перейдите в репозиторий к директории с файлом docker-compose.yaml с помощью командной строки: ###
 
     cd infra_sp2/infra/

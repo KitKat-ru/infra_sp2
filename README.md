@@ -42,7 +42,7 @@
     sudo docker-compose exec python manage.py createsuperuser
     sudo docker-compose exec python manage.py collectstatic 
 
-### Перейдите в директорию с файлом `manage.py`и выполните следующий код:
+#### Перейдите в директорию с файлом `manage.py`и выполните следующий код:
 
     python3 manage.py shell
     # выполнить в открывшемся терминале:

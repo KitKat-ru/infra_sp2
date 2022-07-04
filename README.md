@@ -36,8 +36,11 @@
     sudo docker-compose up -d --build
   
 ### После развертывания проекта создайте миграции и заполнените базу данных: ###
-    
-    sudo docker-compose exec web python manage.py migrate
+
+    sudo docker-compose exec python manage.py makemigrates
+    sudo docker-compose exec python manage.py migrate
+    sudo docker-compose exec python manage.py createsuperuser
+    sudo docker-compose exec python manage.py collectstatic 
 
 ### Перейдите в директорию с файлом `manage.py`и выполните следующий код:
 
@@ -46,7 +49,7 @@
     >>> from django.contrib.contenttypes.models import ContentType
     >>> ContentType.objects.all().delete()
     >>> quit()
-    python manage.py loaddata dump.json
+    python manage.py loaddata fixtures.json
 
 ## Алгоритм регистрации пользователей ##
   

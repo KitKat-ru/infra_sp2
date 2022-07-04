@@ -40,7 +40,12 @@
     sudo docker-compose exec python manage.py makemigrates
     sudo docker-compose exec python manage.py migrate
     sudo docker-compose exec python manage.py createsuperuser
-    sudo docker-compose exec python manage.py collectstatic 
+    sudo docker-compose exec python manage.py collectstatic
+
+#### Перейдите в папку с файлом `ixtures.json` и введите команду:
+
+    sudo docker cp fixtures.json <CONTAINER ID - infra_web>:/app
+    sudo docker exec -it <CONTAINER ID - infra_web> bash 
 
 #### Перейдите в директорию с файлом `manage.py`и выполните следующий код:
 

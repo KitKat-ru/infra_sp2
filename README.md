@@ -10,7 +10,7 @@
 
 ### Клонируйте репозиторий: ###
 
-    git clone hgit@github.com:KitKat-ru/infra_sp2.git
+    git clone git@github.com:KitKat-ru/infra_sp2.git
 
 
 ### Пример файла `.env`. Должен находится в папке `./infra_sp2/infra/`: ###
